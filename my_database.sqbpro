@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="my_database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2032"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Base_date" custom_title="0" dock_id="4" table="4,9:mainBase_date"/><dock_state state="000000ff00000000fd0000000100000002000003bb000002befc0100000003fc00000000000003bb0000000000fffffffa000000000100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320000000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000003bb0000000000000000fb000000160064006f0063006b00420072006f00770073006500340100000000ffffffff0000012800ffffff000002680000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">DROP TABLE IF EXISTS Base_date_new;
+
+CREATE TABLE Base_date_new (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    
+	&quot;Подразделение 1&quot;	TEXT,
+	&quot;Функциональный блок&quot;	TEXT,
+	&quot;Подразделение 2&quot;	TEXT,
+	&quot;Подразделение 3&quot;	TEXT,
+	&quot;Подразделение 4&quot;	TEXT,
+	&quot;Должность&quot;	TEXT,
+	&quot;Роль&quot;	TEXT,
+	&quot;Фамилия&quot;	TEXT,
+	&quot;Имя&quot;	TEXT,
+	&quot;Телефон&quot;	TEXT,
+	&quot;Город&quot;	TEXT,
+	&quot;Адрес&quot;	TEXT,
+	&quot;Занятость&quot;	TEXT
+
+);
+
+INSERT INTO Base_date_new (&quot;Подразделение 1&quot;,&quot;Функциональный блок&quot;,	&quot;Подразделение 2&quot;,	&quot;Подразделение 3&quot;,&quot;Подразделение 4&quot;,&quot;Должность&quot;	,&quot;Роль&quot;	,&quot;Фамилия&quot;	,&quot;Имя&quot;	,&quot;Телефон&quot;	,&quot;Город&quot;	,&quot;Адрес&quot;	,&quot;Занятость&quot;)
+SELECT &quot;Подразделение 1&quot;,&quot;Функциональный блок&quot;,	&quot;Подразделение 2&quot;,	&quot;Подразделение 3&quot;,&quot;Подразделение 4&quot;,&quot;Должность&quot;	,&quot;Роль&quot;	,&quot;Фамилия&quot;	,&quot;Имя&quot;	,&quot;Телефон&quot;	,&quot;Город&quot;	,&quot;Адрес&quot;	,&quot;Занятость&quot;
+FROM Base_date;
+
+
+DROP TABLE Base_date;
+
+
+ALTER TABLE Base_date_new RENAME TO Base_date;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
